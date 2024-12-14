@@ -25,13 +25,6 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  //  600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
-
 / {
     combos {
         compatible = "zmk,combos";
