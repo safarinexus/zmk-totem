@@ -23,7 +23,35 @@
 #define TVP2 5
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <21 22>;
+            timeout-ms = <180>;
+            layers = <0 1>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+            timeout-ms = <180>;
+            layers = <0 1>;
+        };
+
+        lock {
+            bindings = <&tog 9>;
+            key-positions = <20 31>;
+            layers = <0 1>;
+        };
+
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <7 8>;
+            layers = <7>;
+        };
+    };
 
     behaviors {
         left_thumb: left_thumb {
@@ -40,6 +68,38 @@
             label = "RIGHT_THUMB";
             #binding-cells = <0>;
             bindings = <&lt 7 C_PLAY_PAUSE>, <&tog 6>;
+
+            tapping-term-ms = <180>;
+        };
+
+        game_button: game_button {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GAME_BUTTON";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&tog 3>;
+        };
+
+        league_button: league_button {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEAGUE_BUTTON";
+            #binding-cells = <0>;
+            bindings = <&kp RSHIFT>, <&tog 2>;
+        };
+
+        win_right_mod: win_right_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_RIGHT_MOD";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL>, <&kp RGUI>;
+
+            tapping-term-ms = <180>;
+        };
+
+        os_swap: os_swap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OS_SWAP";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&tog 1>;
 
             tapping-term-ms = <180>;
         };
@@ -64,19 +124,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp E      &kp R     &kp T          &kp Y         &kp U      &kp I      &kp O    &kp P
-           &kp A  &kp S  &kp D      &kp F     &kp G          &kp H         &kp J      &kp K      &kp L    &kp BSPC
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V     &kp B          &kp N         &kp M      &kp COMMA  &kp DOT  &kp RET   &kp LSHFT
-                         &kp LCTRL  &kp LGUI  &left_thumb    &right_thumb  &kp SPACE  &kp RALT
+              &kp Q  &kp W  &kp E     &kp R     &kp T          &kp Y         &kp U      &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D     &kp F     &kp G          &kp H         &kp J      &kp K      &kp L    &kp BSPC
+&game_button  &kp Z  &kp X  &kp C     &kp V     &kp B          &kp N         &kp M      &kp COMMA  &kp DOT  &kp RET   &league_button
+                            &os_swap  &kp LGUI  &left_thumb    &right_thumb  &kp SPACE  &kp RALT
             >;
         };
 
         win {
             bindings = <
-        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LEFT_ALT  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans          &trans  &trans
+        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans          &trans  &trans  &trans
+                        &trans  &kp LEFT_ALT  &trans    &trans  &trans  &win_right_mod
             >;
         };
 
