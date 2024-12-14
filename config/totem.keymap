@@ -36,7 +36,7 @@
         lock {
             bindings = <&tog 9>;
             key-positions = <20 31>;
-            layers = <0 1>;
+            layers = <0 1 9>;
         };
 
         dash {
@@ -135,19 +135,19 @@
 
         league {
             bindings = <
-       &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-       &kp Q   &kp W   &kp E     &kp R      &kp T        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-&mo 4  &kp A   &kp S   &kp V     &kp F      &kp B        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-                       &kp LALT  &kp SPACE  &kp LCTRL    &tog 3  &tog 3  &tog 3
+       &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+       &kp Q   &kp W   &kp E     &kp R      &kp T        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+&mo 4  &kp A   &kp S   &kp V     &kp F      &kp B        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+                       &kp LALT  &kp SPACE  &kp LCTRL    &tog 2  &tog 2  &tog 2
             >;
         };
 
         game {
             bindings = <
-       &kp TAB     &kp Q  &kp W     &kp E      &kp R        &tog 4  &tog 4  &tog 4 &tog 4 &tog 4
-       &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &tog 4  &tog 4  &tog 4 &tog 4 &tog 4
-&mo 4  &kp ESC     &kp Z  &kp X     &kp C      &kp V        &tog 4  &tog 4  &tog 4 &tog 4 &tog 4 &tog 4
-                          &kp LALT  &kp SPACE  &kp LCTRL    &tog 4  &tog 4  &tog 4
+       &kp TAB     &kp Q  &kp W     &kp E      &kp R        &tog 3  &tog 3  &tog 3 &tog 3 &tog 3
+       &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &tog 3  &tog 3  &tog 3 &tog 3 &tog 3
+&mo 4  &kp ESC     &kp Z  &kp X     &kp C      &kp V        &tog 3  &tog 3  &tog 3 &tog 3 &tog 3 &tog 3
+                          &kp LALT  &kp SPACE  &kp LCTRL    &tog 3  &tog 3  &tog 3
             >;
         };
 
@@ -180,10 +180,10 @@
 
         symbols {
             bindings = <
-       &none            &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GRAVE      &kp BSLH   &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp EQUAL
-       &kp EXCLAMATION  &kp AT             &kp POUND              &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK          &kp SEMICOLON     &kp SQT
-&none  &kp LSHIFT       &none              &none                  &none            &none          &kp SLASH  &kp QUESTION    &kp LESS_THAN         &kp GREATER_THAN  &kp RSHIFT  &none
-                                           &trans                 &trans           &trans         &trans     &trans          &trans
+        &none            &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GRAVE      &kp BSLH   &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp EQUAL
+        &kp EXCLAMATION  &kp AT             &kp POUND              &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK          &kp SEMICOLON     &kp SQT
+&LSHIFT &kp LSHIFT       &none              &none                  &none            &none          &kp SLASH  &kp QUESTION    &kp LESS_THAN         &kp GREATER_THAN  &kp RSHIFT  &RSHIFT
+                                        &trans                 &trans           &trans         &trans     &trans          &trans
             >;
         };
 
