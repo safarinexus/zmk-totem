@@ -11,11 +11,14 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
@@ -60,6 +63,12 @@
             bindings = <&kp ENTER>;
             key-positions = <19 31>;
             layers = <0 1>;
+        };
+
+        game_six {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <1 2>;
+            layers = <2>;
         };
     };
 
@@ -154,7 +163,7 @@
             bindings = <
        &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
        &kp Q   &kp W   &kp E     &kp R      &kp T        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
-&mo 4  &kp A   &kp S   &kp V     &kp F      &kp B        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+&mo 4  &kp A   &kp S   &kp D     &kp V      &kp B        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
                        &kp LALT  &kp SPACE  &kp LCTRL    &tog 2  &tog 2  &tog 2
             >;
         };
