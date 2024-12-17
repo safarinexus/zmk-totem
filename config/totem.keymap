@@ -16,6 +16,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
@@ -34,7 +37,7 @@
             bindings = <&kp ESCAPE>;
             key-positions = <21 22>;
             timeout-ms = <180>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         tab {
@@ -58,7 +61,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 31>; 
+            key-positions = <19 31>;
             layers = <0 1>;
         };
 
@@ -105,6 +108,8 @@
             label = "GAME_BUTTON";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&tog 3>;
+
+            tapping-term-ms = <220>;
         };
 
         league_button: league_button {
@@ -112,6 +117,8 @@
             label = "LEAGUE_BUTTON";
             #binding-cells = <0>;
             bindings = <&kp RSHIFT>, <&tog 2>;
+
+            tapping-term-ms = <220>;
         };
 
         win_right_mod: win_right_mod {
@@ -158,19 +165,19 @@
 
         league {
             bindings = <
-       &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
-       &kp Q   &kp W   &kp E     &kp R      &kp T        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
-&mo 4  &kp A   &kp S   &kp D     &kp V      &kp B        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
-                       &kp LALT  &kp SPACE  &kp LCTRL    &tog 2  &tog 2  &tog 2
+         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+         &kp Q   &kp W   &kp E     &kp R      &kp T        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+&lt 4 G  &kp A   &kp S   &kp D     &kp V      &kp B        &tog 2  &tog 2  &tog 2  &tog 2  &tog 2  &tog 2
+                         &kp LALT  &kp SPACE  &kp LCTRL    &tog 2  &tog 2  &tog 2
             >;
         };
 
         game {
             bindings = <
-       &kp TAB     &kp Q  &kp W     &kp E      &kp R        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-       &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-&mo 4  &kp ESC     &kp Z  &kp X     &kp C      &kp V        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
-                          &kp LALT  &kp SPACE  &kp LCTRL    &tog 3  &tog 3  &tog 3
+         &kp TAB     &kp Q  &kp W     &kp E      &kp R        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
+         &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
+&lt 4 G  &kp ESC     &kp Z  &kp X     &kp C      &kp V        &tog 3  &tog 3  &tog 3  &tog 3  &tog 3  &tog 3
+                            &kp LALT  &kp SPACE  &kp LCTRL    &tog 3  &tog 3  &tog 3
             >;
         };
 
