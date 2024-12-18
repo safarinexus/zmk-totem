@@ -16,6 +16,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
@@ -72,6 +75,12 @@
             bindings = <&kp V>;
             key-positions = <25 24>;
             layers = <2>;
+        };
+
+        game_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <20 10>;
+            layers = <3>;
         };
     };
 
