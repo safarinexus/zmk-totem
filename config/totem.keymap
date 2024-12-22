@@ -218,7 +218,7 @@
         admin {
             bindings = <
        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F9  &kp F10  &kp F11  &kp F12  &none
-       &none           &none         &tog 3        &tog 2        &out OUT_TOG    &kp F5  &kp F6   &kp F7   &kp F8   &kp LA(F4)
+       &tog 2          &none         &tog 3       &none     &out OUT_TOG    &kp F5  &kp F6   &kp F7   &kp F8   &kp LA(F4)
 &none  &bt BT_CLR_ALL  &none         &none         &none         &bt BT_CLR      &kp F1  &kp F2   &kp F3   &kp F4   &none       &none
                                      &trans        &trans        &trans          &trans  &trans   &trans
             >;
