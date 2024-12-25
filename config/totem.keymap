@@ -47,7 +47,7 @@
         lock {
             bindings = <&tog 9>;
             key-positions = <20 31>;
-            layers = <0 1 9>;
+            layers = <0 1 5 9>;
         };
 
         dash {
@@ -58,7 +58,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <29 30>;
+            key-positions = <27 30>;
             layers = <0 1>;
         };
 
