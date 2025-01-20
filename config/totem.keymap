@@ -179,7 +179,7 @@
         game {
             bindings = <
        &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y   &kp U      &kp I          &kp O    &kp P
-       &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp H   &kp J      &kp K          &kp L    &kp ;
+       &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp H   &kp J      &kp K          &kp L    &kp SEMICOLON
 &mo 4  &kp ESC     &kp Z  &kp X     &kp C      &kp G        &kp N   &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
                           &kp LALT  &kp SPACE  &kp LCTRL    &tog 3  &kp ENTER  &kp RIGHT_GUI
             >;
