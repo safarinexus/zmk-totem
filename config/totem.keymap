@@ -16,8 +16,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #define MAC 0
 #define WIN 1
@@ -145,6 +145,13 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&tog 1>;
         };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
     };
 
     keymap {
@@ -172,19 +179,19 @@
 
         league {
             bindings = <
-            &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y         &kp U    &kp I          &kp O    &kp P
-            &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H         &kp J    &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N         &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                        &kp LALT  &kp SPACE  &kp LCTRL    &tog LEAGUE   &mo MAC  &kp RIGHT_GUI
+                &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y             &kp U    &kp I          &kp O    &kp P
+                &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H             &kp J    &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS    &kp A   &kp S   &kp D     &kp B      &kp G        &kp N             &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE   &mo MAC  &kp RIGHT_GUI
             >;
         };
 
         game {
             bindings = <
-            &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U           &kp I          &kp O    &kp P
-            &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J           &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                         &kp LALT  &kp SPACE  &kp LCTRL         &tog GAME       &kp ENTER  &kp RIGHT_GUI 
+                &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U           &kp I          &kp O    &kp P
+                &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J           &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS    &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                      &kp LALT   &kp SPACE  &kp LCTRL    &tog_off GAME  &kp ENTER  &kp RIGHT_GUI 
             >;  
         };
 
@@ -208,10 +215,10 @@
 
         mouse {
             bindings = <
-           &none     &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp C_BRI_UP  &kp HOME       &kp PG_DN      &kp PG_UP     &kp END
-           &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp C_BRI_DN  &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT
-&kp LCTRL  &none     &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &mkp MB5          &kp SPACE     &media_button  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp RCTRL
-                                     &kp LEFT_ALT    &kp LEFT_GUI     &tog MOUSE        &tog MOUSE    &kp RIGHT_GUI  &kp RIGHT_ALT
+           &none     &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp C_BRI_UP    &kp HOME       &kp PG_DN      &kp PG_UP     &kp END
+           &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp C_BRI_DN    &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT
+&kp LCTRL  &none     &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &mkp MB5          &kp SPACE       &media_button  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp RCTRL
+                                     &kp LEFT_ALT    &kp LEFT_GUI     &tog_off MOUSE    &tog_off MOUSE  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
         };
 
