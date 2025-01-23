@@ -10,12 +10,12 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
@@ -30,7 +30,7 @@
 #define WIN 1 
 #define LEAGUE 2 
 #define GAME 3
-#define GAME+ 4
+#define GAMEPLUS 4
 #define LEFT 5
 #define RIGHT 6 
 #define SYMBOL 7
@@ -187,18 +187,18 @@
 
         league {
             bindings = <
-            &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y            &kp U      &kp I          &kp O    &kp P
-            &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H            &kp J      &kp K          &kp L    &kp SEMICOLON
-&mo GAME+   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N            &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y            &kp U      &kp I          &kp O    &kp P
+                &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H            &kp J      &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS    &kp A   &kp S   &kp D     &kp B      &kp G        &kp N            &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
                             &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE  &mo MAC    &kp RIGHT_GUI
             >;
         };
 
         game {
             bindings = <
-            &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U      &kp I          &kp O    &kp P
-            &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J      &kp K          &kp L    &kp SEMICOLON
-&mo GAME+   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U      &kp I          &kp O    &kp P
+                &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J      &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS    &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
                         &kp LALT  &kp SPACE  &kp LCTRL               &tog_off GAME  &kp ENTER  &kp RIGHT_GUI
             >;
         };
