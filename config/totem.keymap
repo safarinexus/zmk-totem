@@ -30,7 +30,7 @@
 #define WIN 1
 #define LEAGUE 2
 #define GAME 3
-#define GAME+ 4
+#define GAMEPLUS 4
 #define LEFT 5
 #define RIGHT 6
 #define SYMBOL 7
@@ -181,7 +181,7 @@
             bindings = <
             &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y         &kp U    &kp I          &kp O    &kp P
             &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H         &kp J    &kp K          &kp L    &kp SEMICOLON
-&mo GAME+   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N         &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+&mo GAMEPLUS   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N         &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
                         &kp LALT  &kp SPACE  &kp LCTRL    &tog LEAGUE   &mo MAC  &kp RIGHT_GUI
             >;
         };
@@ -190,12 +190,12 @@
             bindings = <
             &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U           &kp I          &kp O    &kp P
             &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J           &kp K          &kp L    &kp SEMICOLON
-&mo GAME+   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+&mo GAMEPLUS   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
                                          &kp LALT  &kp SPACE  &kp LCTRL         &tog GAME       &kp ENTER  &kp RIGHT_GUI 
             >;  
         };
 
-        game+ {
+        gameplus {
             bindings = <
         &kp I  &kp C_VOL_DN  &trans  &kp C_VOL_UP  &media_button    &none  &none  &none  &none  &none
         &kp U  &kp N1        &kp N2  &kp N3        &kp T            &none  &none  &none  &none  &none
