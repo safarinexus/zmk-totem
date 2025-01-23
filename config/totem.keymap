@@ -199,7 +199,7 @@
            &kp HOME    &kp PG_UP     &kp PG_DN     &kp END        &kp C_BRIGHTNESS_INC    &kp STAR   &kp N7            &kp N8         &kp N9  &kp FSLH
            &kp LEFT    &kp UP        &kp DOWN      &kp RIGHT      &kp C_BRIGHTNESS_DEC    &kp PLUS   &kp N4            &kp N5         &kp N6  &kp BSPC
 &kp LCTRL  &kp C_PREV  &kp C_VOL_UP  &kp C_VOL_DN  &media_button  &kp SPACE               &kp MINUS  &kp N1            &kp N2         &kp N3  &kp DOT   &kp RIGHT_CONTROL
-                                     &kp LEFT_ALT  &kp LEFT_GUI   &trans                  &trans     &mt RIGHT_GUI N0  &kp RIGHT_ALT
+                                     &kp LEFT_ALT  &kp LEFT_GUI   &trans                  &trans     &mt RIGHT_GUI N0  &trans
             >;
         };
 
