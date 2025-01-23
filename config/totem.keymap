@@ -26,6 +26,16 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  //  600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#define MAC 0
+#define WIN 1
+#define LEAGUE 2
+#define GAME 3
+#define GAME+ 4
+#define LEFT 5
+#define RIGHT 6
+#define SYMBOL 7
+#define ADMIN 8
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -142,13 +152,6 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&tog 1>;
         };
-
-        tog_off: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
     };
 
     keymap {
@@ -176,19 +179,19 @@
 
         league {
             bindings = <
-        &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y            &kp U    &kp I          &kp O    &kp P
-        &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H            &kp J    &kp K          &kp L    &kp SEMICOLON
-&mo 4   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N            &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                        &kp LALT  &kp SPACE  &kp LCTRL    &tog 2       &mo 0    &kp RIGHT_GUI
+            &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y         &kp U    &kp I          &kp O    &kp P
+            &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H         &kp J    &kp K          &kp L    &kp SEMICOLON
+&mo GAME+   &kp A   &kp S   &kp D     &kp B      &kp G        &kp N         &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                        &kp LALT  &kp SPACE  &kp LCTRL    &tog LEAGUE   &mo MAC  &kp RIGHT_GUI
             >;
         };
 
         game {
             bindings = <
-        &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U           &kp I          &kp O    &kp P
-        &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J           &kp K          &kp L    &kp SEMICOLON
-&mo 4   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                         &kp LALT  &kp SPACE  &kp LCTRL         &tog 3   &kp ENTER  &kp RIGHT_GUI 
+            &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U           &kp I          &kp O    &kp P
+            &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J           &kp K          &kp L    &kp SEMICOLON
+&mo GAME+   &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                         &kp LALT  &kp SPACE  &kp LCTRL         &tog GAME       &kp ENTER  &kp RIGHT_GUI 
             >;  
         };
 
@@ -215,7 +218,7 @@
            &none     &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp C_BRI_UP  &kp HOME       &kp PG_DN      &kp PG_UP     &kp END
            &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp C_BRI_DN  &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT
 &kp LCTRL  &none     &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &mkp MB5          &kp SPACE     &media_button  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp RCTRL
-                                     &kp LEFT_ALT    &kp LEFT_GUI     &tog_off 6        &tog_off 6    &kp RIGHT_GUI  &kp RIGHT_ALT
+                                     &kp LEFT_ALT    &kp LEFT_GUI     &tog RIGHT        &tog RIGHT    &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
         };
 
@@ -231,7 +234,7 @@
         admin {
             bindings = <
            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F9  &kp F10         &kp F11     &kp F12  &none
-           &tog 2        &none         &tog 3        &out OUT_BLE  &out OUT_USB    &kp F5  &kp F6          &kp F7      &kp F8   &kp LA(F4)
+           &tog LEAGUE        &none    &tog GAME     &out OUT_BLE  &out OUT_USB    &kp F5  &kp F6          &kp F7      &kp F8   &kp LA(F4)
 &kp LCTRL  &none         &none         &none         &none         &none           &kp F1  &kp F2          &kp F3      &kp F4   &none       &none
                                        &kp LEFT_ALT  &kp LEFT_GUI  &trans          &trans  &bt BT_CLR      &bt BT_CLR_ALL
             >;
