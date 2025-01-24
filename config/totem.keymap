@@ -126,7 +126,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_OS_SWAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&to 1>;
+            bindings = <&kp LEFT_ALT>, <&to 0>;
         };
 
         media_button: media_button {
