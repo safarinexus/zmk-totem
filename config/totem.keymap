@@ -38,7 +38,7 @@
             key-positions = <21 22>;
             timeout-ms = <180>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
         };
 
         tab {
@@ -46,21 +46,21 @@
             key-positions = <0 1>;
             timeout-ms = <180>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
         };
 
         lock {
             bindings = <&tog 9>;
             key-positions = <20 31>;
             layers = <0 1 9 6>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
             layers = <0 1 3>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
         };
 
         game_six {
