@@ -16,12 +16,12 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #define MAC 0
-#define LEAGUE 1
-#define WIN 2
+#define WIN 1
+#define LEAGUE 2
 #define GAME 3
 #define GAMEPLUS 4
 #define NUMPAD 5
@@ -126,7 +126,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_OS_SWAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&to 0>;
+            bindings = <&kp LEFT_ALT>, <&tog 1>;
         };
 
         media_button: media_button {
@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MAC_OS_SWAP";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&to 2>;
+            bindings = <&kp LCTRL>, <&tog 1>;
         };
 
         tog_off: toggle_layer_off_only {
@@ -172,21 +172,21 @@
             >;
         };
 
-        league {
+        win {
             bindings = <
-                &kp N1  &kp N2  &kp N3    &kp N4     &kp N5             &kp Y             &kp U     &kp I          &kp O    &kp P
-                &kp Q   &kp W   &kp E     &kp R      &kp T              &kp H             &kp J     &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS    &kp A   &kp S   &kp D     &kp B      &kp G              &kp N             &kp M     &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp SPACE  &kp LCTRL          &tog_off LEAGUE   &mo WIN   &kp RIGHT_GUI
+        &trans  &trans  &trans        &trans     &trans    &trans  &trans  &trans          &trans  &trans
+        &trans  &trans  &trans        &trans     &trans    &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans  &trans        &trans     &trans    &trans  &trans  &trans          &trans  &trans  &trans
+                        &win_os_swap  &kp LCTRL  &trans    &trans  &trans  &win_right_mod
             >;
         };
 
-        win {
+        league {
             bindings = <
-                &kp Q  &kp W  &kp E         &kp R          &kp T                &kp Y         &kp U      &kp I      &kp O    &kp P
-                &kp A  &kp S  &kp D         &kp F          &kp G                &kp H         &kp J      &kp K      &kp L    &kp BSPC
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V          &kp B                &kp N         &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
-                              &win_os_swap  &kp LCTRL      &left_thumb          &right_thumb  &kp SPACE  &win_right_mod
+                &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y             &kp U    &kp I          &kp O    &kp P
+                &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H             &kp J    &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS    &kp A   &kp S   &kp D     &kp B      &kp G        &kp N             &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE   &mo MAC  &kp RIGHT_GUI
             >;
         };
 
