@@ -52,27 +52,27 @@
         lock {
             bindings = <&tog 9>;
             key-positions = <20 31>;
-            layers = <0 1 9 6>;
+            layers = <0 2 9 6>;
             require-prior-idle-ms = <25>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
-            layers = <0 1 3>;
+            layers = <0 2 3>;
             require-prior-idle-ms = <25>;
         };
 
         game_six {
             bindings = <&kp NUMBER_6>;
             key-positions = <3 4>;
-            layers = <2>;
+            layers = <1>;
         };
 
         shop {
             bindings = <&kp V>;
             key-positions = <25 24>;
-            layers = <2>;
+            layers = <1>;
         };
 
         game_enter {
@@ -84,7 +84,7 @@
         left_del {
             bindings = <&kp DEL>;
             key-positions = <20 10>;
-            layers = <0 1 5 7>;
+            layers = <0 2 5 7>;
         };
     };
 
