@@ -11,14 +11,15 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
-
 #define MAC 0
 #define WIN 1
 #define LEAGUE 2
@@ -85,6 +86,12 @@
             bindings = <&kp DEL>;
             key-positions = <20 10>;
             layers = <0 1 5 7>;
+        };
+
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <24 27>;
+            layers = <8>;
         };
     };
 
@@ -174,29 +181,29 @@
 
         win {
             bindings = <
-                &kp Q  &kp W  &kp E         &kp R       &kp T          &kp Y         &kp U      &kp I      &kp O    &kp P
-                &kp A  &kp S  &kp D         &kp F       &kp G          &kp H         &kp J      &kp K      &kp L    &kp BSPC
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V       &kp B          &kp N         &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
-                              &win_os_swap  &kp LCTRL   &left_thumb    &right_thumb  &kp SPACE  &win_right_mod
+                &kp Q  &kp W  &kp E         &kp R      &kp T          &kp Y         &kp U      &kp I           &kp O    &kp P
+                &kp A  &kp S  &kp D         &kp F      &kp G          &kp H         &kp J      &kp K           &kp L    &kp BSPC
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B          &kp N         &kp M      &kp COMMA       &kp DOT  &kp SLASH  &kp RSHIFT
+                              &win_os_swap  &kp LCTRL  &left_thumb    &right_thumb  &kp SPACE  &win_right_mod
             >;
         };
 
         league {
             bindings = <
-                &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y             &kp U       &kp I          &kp O    &kp P
-                &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H             &kp J       &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS    &kp A   &kp S   &kp D     &kp B      &kp G        &kp N             &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE   &mo MOUSE   &kp RIGHT_GUI
+              &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y            &kp U      &kp I          &kp O    &kp P
+              &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H            &kp J      &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp B      &kp G        &kp N            &kp M      &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
+                              &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE  &mo MOUSE  &kp RIGHT_GUI
             >;
         };
 
         game {
             bindings = <
-                &kp TAB     &kp Q     &kp W      &kp E      &kp R        &kp Y          &kp U       &kp I          &kp O    &kp P
-                &kp LSHIFT  &kp A     &kp S      &kp D      &kp F        &kp H          &kp J       &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS    &kp ESC     &kp Z     &kp X      &kp C      &kp G        &kp N          &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                      &kp LALT   &kp SPACE  &kp LCTRL    &tog_off GAME  &mo MOUSE   &kp RIGHT_GUI 
-            >;  
+              &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y          &kp U      &kp I          &kp O    &kp P
+              &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp H          &kp J      &kp K          &kp L    &kp SEMICOLON
+&mo GAMEPLUS  &kp ESC     &kp Z  &kp X     &kp C      &kp G        &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
+                                 &kp LALT  &kp SPACE  &kp LCTRL    &tog_off GAME  &mo MOUSE  &kp RIGHT_GUI
+            >;
         };
 
         gameplus {
@@ -210,9 +217,9 @@
 
         numpad {
             bindings = <
-           &kp HOME    &kp PG_UP     &kp PG_DN     &kp END        &kp C_BRIGHTNESS_INC    &kp STAR   &kp N7            &kp N8         &kp N9  &kp FSLH
-           &kp LEFT    &kp UP        &kp DOWN      &kp RIGHT      &kp C_BRIGHTNESS_DEC    &kp PLUS   &kp N4            &kp N5         &kp N6  &kp BSPC
-&kp LCTRL  &kp C_PREV  &kp C_VOL_UP  &kp C_VOL_DN  &media_button  &kp SPACE               &kp MINUS  &kp N1            &kp N2         &kp N3  &kp DOT   &kp RIGHT_CONTROL
+           &kp HOME    &kp PG_UP     &kp PG_DN     &kp END        &kp C_BRIGHTNESS_INC    &kp STAR   &kp N7            &kp N8  &kp N9  &kp FSLH
+           &kp LEFT    &kp UP        &kp DOWN      &kp RIGHT      &kp C_BRIGHTNESS_DEC    &kp PLUS   &kp N4            &kp N5  &kp N6  &kp BSPC
+&kp LCTRL  &kp C_PREV  &kp C_VOL_UP  &kp C_VOL_DN  &media_button  &kp SPACE               &kp MINUS  &kp N1            &kp N2  &kp N3  &kp DOT   &kp RIGHT_CONTROL
                                      &kp LEFT_ALT  &kp LEFT_GUI   &trans                  &trans     &mt RIGHT_GUI N0  &trans
             >;
         };
@@ -230,17 +237,17 @@
             bindings = <
             &kp EXCLAMATION  &kp AT_SIGN  &kp POUND              &kp DOLLAR       &kp PERCENT          &kp CARET         &kp AMPERSAND   &kp ASTERISK          &kp MINUS         &kp EQUAL
             &kp GRAVE        &kp TILDE    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET    &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp SEMICOLON     &kp APOS
-&kp LSHIFT  &kp BACKSLASH    &none        &none                  &none            &none                &none             &kp PIPE        &kp LESS_THAN         &kp GREATER_THAN  &kp QUESTION   &kp RIGHT_SHIFT
+&kp LSHIFT  &kp BACKSLASH    &none        &none                  &none            &none                &none             &kp PIPE        &kp LESS_THAN         &kp GREATER_THAN  &kp QUESTION  &kp RIGHT_SHIFT
                                           &trans                 &trans           &trans               &trans            &trans          &trans
             >;
         };
 
         admin {
             bindings = <
-           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F9  &kp F10         &kp F11     &kp F12  &none
-           &tog LEAGUE   &none         &tog GAME     &out OUT_BLE  &out OUT_USB    &kp F5  &kp F6          &kp F7      &kp F8   &kp LA(F4)
-&kp LCTRL  &none         &none         &none         &none         &none           &kp F1  &kp F2          &kp F3      &kp F4   &none       &none
-                                       &kp LEFT_ALT  &kp LEFT_GUI  &trans          &trans  &bt BT_CLR      &bt BT_CLR_ALL
+           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F9  &kp F10     &kp F11         &kp F12  &none
+           &tog LEAGUE   &none         &tog GAME     &out OUT_BLE  &out OUT_USB    &kp F5  &kp F6      &kp F7          &kp F8   &kp LA(F4)
+&kp LCTRL  &none         &none         &none         &none         &none           &kp F1  &kp F2      &kp F3          &kp F4   &none       &none
+                                       &kp LEFT_ALT  &kp LEFT_GUI  &trans          &trans  &bt BT_CLR  &bt BT_CLR_ALL
             >;
         };
 
