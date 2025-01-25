@@ -190,9 +190,9 @@
 
         league {
             bindings = <
-              &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp Y            &kp U      &kp I          &kp O    &kp P
-              &kp Q   &kp W   &kp E     &kp R      &kp T        &kp H            &kp J      &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp B      &kp G        &kp N            &kp M      &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
+              &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &none            &none      &none          &none  &none
+              &kp Q   &kp W   &kp E     &kp R      &kp T        &none            &none      &none          &none  &none
+&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp B      &kp G        &none            &none      &none          &none  &none  &none
                               &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE  &mo MOUSE  &kp RIGHT_GUI
             >;
         };
@@ -201,17 +201,17 @@
             bindings = <
               &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y          &kp U      &kp I          &kp O    &kp P
               &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp H          &kp J      &kp K          &kp L    &kp SEMICOLON
-&mo GAMEPLUS  &kp ESC     &kp Z  &kp X     &kp C      &kp G        &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
+&mo GAMEPLUS  &kp ESC     &kp Z  &kp X     &kp C      &kp G        &kp N          &kp M      &kp COMMA      &kp DOT  &kp FSLH       &kp RSHIFT
                                  &kp LALT  &kp SPACE  &kp LCTRL    &tog_off GAME  &mo MOUSE  &kp RIGHT_GUI
             >;
         };
 
         gameplus {
             bindings = <
-        &kp I  &kp C_VOL_DN  &trans  &kp C_VOL_UP  &media_button    &none  &none  &none  &none  &none
-        &kp U  &kp N1        &kp N2  &kp N3        &kp T            &none  &none  &none  &none  &none
-&trans  &kp H  &kp N4        &kp N5  &kp N6        &kp M            &none  &none  &none  &none  &none  &none
-                             &trans  &trans        &trans           &none  &none  &none
+        &kp N1  &kp N2  &kp N3      &kp N4  &kp C_VOL_UP     &none  &none  &none  &none  &none
+        &kp T   &kp Y   &kp U       &kp I   &kp C_VOL_DN     &none  &none  &none  &none  &none
+&trans  &kp H   &kp N   &kp M       &kp V   &kp B            &none  &none  &none  &none  &none  &none
+                        &kp C_PREV  &trans  &media_button    &none  &none  &none
             >;
         };
 
