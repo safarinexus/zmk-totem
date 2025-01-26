@@ -37,17 +37,13 @@
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <21 22>;
-            timeout-ms = <180>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <25>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <0 1>;
-            timeout-ms = <180>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <25>;
         };
 
         lock {
@@ -61,7 +57,7 @@
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
             layers = <0 1 3>;
-            require-prior-idle-ms = <25>;
+            require-prior-idle-ms = <30>;
         };
 
         game_enter {
