@@ -64,18 +64,6 @@
             require-prior-idle-ms = <25>;
         };
 
-        game_six {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <3 4>;
-            layers = <2>;
-        };
-
-        shop {
-            bindings = <&kp V>;
-            key-positions = <25 24>;
-            layers = <2>;
-        };
-
         game_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 10>;
@@ -92,6 +80,11 @@
             bindings = <&soft_off>;
             key-positions = <24 27>;
             layers = <8>;
+        };
+
+        league_six {
+            bindings = <&kp N6>;
+            key-positions = <3 4>;
         };
     };
 
@@ -192,7 +185,7 @@
             bindings = <
               &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &none            &none      &none          &none  &none
               &kp Q   &kp W   &kp E     &kp R      &kp T        &none            &none      &none          &none  &none
-&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp B      &kp G        &none            &none      &none          &none  &none  &none
+&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp G      &kp B        &none            &none      &none          &none  &none  &none
                               &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE  &mo MOUSE  &kp RIGHT_GUI
             >;
         };
@@ -208,10 +201,10 @@
 
         gameplus {
             bindings = <
-        &kp N1  &kp N2  &kp N3      &kp N4  &kp C_VOL_UP     &none  &none  &none  &none  &none
-        &kp T   &kp Y   &kp U       &kp I   &kp C_VOL_DN     &none  &none  &none  &none  &none
-&trans  &kp H   &kp N   &kp M       &kp V   &kp B            &none  &none  &none  &none  &none  &none
-                        &kp C_PREV  &trans  &media_button    &none  &none  &none
+        &kp Y  &kp U   &kp I         &kp C_VOL_DN  &kp C_VOL_UP     &none  &none  &none  &none  &none
+        &kp H  &kp N1  &kp N2        &kp NUMBER_3  &kp T            &none  &none  &none  &none  &none
+&trans  &kp N  &kp M   &kp NUMBER_4  &kp V         &kp B            &none  &none  &none  &none  &none  &none
+                       &kp C_PREV    &trans        &media_button    &none  &none  &none
             >;
         };
 
