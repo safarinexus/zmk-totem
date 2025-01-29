@@ -181,7 +181,7 @@
             bindings = <
               &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &none            &none      &none          &none  &none
               &kp Q   &kp W   &kp E     &kp R      &kp T        &none            &none      &none          &none  &none
-&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp G      &kp B        &none            &none      &none          &none  &none  &none
+&mo GAMEPLUS  &kp A   &kp S   &kp D     &kp F      &kp G        &none            &none      &none          &none  &none  &none
                               &kp LALT  &kp SPACE  &kp LCTRL    &tog_off LEAGUE  &mo MOUSE  &kp RIGHT_GUI
             >;
         };
@@ -197,10 +197,10 @@
 
         gameplus {
             bindings = <
-        &kp Y  &kp U   &kp I         &kp C_VOL_DN  &kp C_VOL_UP     &none  &none  &none  &none  &none
-        &kp H  &kp N1  &kp N2        &kp NUMBER_3  &kp T            &none  &none  &none  &none  &none
-&trans  &kp N  &kp M   &kp NUMBER_4  &kp V         &kp B            &none  &none  &none  &none  &none  &none
-                       &kp C_PREV    &trans        &media_button    &none  &none  &none
+        &kp Y  &kp U   &kp I       &kp C_VOL_UP  &kp T            &none  &none  &none  &none  &none
+        &kp H  &kp N1  &kp N2      &kp C_VOL_DN  &kp N6           &none  &none  &none  &none  &none
+&trans  &kp N  &kp M   &kp N3      &kp V         &kp B            &none  &none  &none  &none  &none  &none
+                       &kp C_PREV  &trans        &media_button    &none  &none  &none
             >;
         };
 
