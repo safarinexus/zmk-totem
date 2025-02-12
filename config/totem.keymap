@@ -81,6 +81,7 @@
         league_six {
             bindings = <&kp N6>;
             key-positions = <3 4>;
+            layers = <2>;
         };
     };
 
