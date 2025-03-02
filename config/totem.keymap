@@ -218,7 +218,7 @@
             bindings = <
            &none     &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &kp C_BRI_UP    &kp HOME       &kp PG_DN      &kp PG_UP     &kp END
            &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp C_BRI_DN    &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT
-&kp LCTRL  &none     &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &mkp MB5          &kp SPACE       &media_button  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp RCTRL
+&kp LCTRL  &kp CAPS  &msc SCRL_LEFT  &mkp MB3        &msc SCRL_RIGHT  &mkp MB5          &kp SPACE       &media_button  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV  &kp RCTRL
                                      &kp LEFT_ALT    &kp LEFT_GUI     &tog_off MOUSE    &tog_off MOUSE  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
         };
