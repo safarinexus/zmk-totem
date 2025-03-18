@@ -1150,6 +1150,10 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="47" y="176" width="28" height="26" class="combo"/>
 <text x="61" y="189" class="combo tap">DEL</text>
 </g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="168" y="144" width="28" height="26" class="combo"/>
+<text x="182" y="157" class="combo tap">MUTE</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 2193)" class="layer-mouse">
